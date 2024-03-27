@@ -24,8 +24,6 @@ def main():
         # Запрашиваем ответ от GPT-3.5 на основе текущего контекста и ввода пользователя
         response = ask_gpt3(context, user_input)
 
-      
-
         # Выводим ответ AI
         print("AI:", response)
 
