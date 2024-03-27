@@ -7,7 +7,7 @@ openai.api_key = 'your_key'
 def ask_gpt3(context, prompt):
     response = openai.Completion.create(
         engine="gpt-3.5-turbo-0125",  # Выбираем нужную модель GPT-3.5
-        prompt=context + prompt,  # Передаем контекст и запрос
+        prompt=context + "Вопрос: " + prompt,  # Передаем контекст и запрос
         max_tokens=100  # Максимальное количество токенов в ответе
     )
     return response.choices[0].text.strip()
